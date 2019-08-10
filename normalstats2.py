@@ -12,7 +12,7 @@ import random
 import math
 
 
-def mean (numbers, num):
+def mean(numbers, num):
 	sum = 0
 
 	for val in numbers:
@@ -21,7 +21,7 @@ def mean (numbers, num):
 	return sum / num
 
 
-def stddev (numbers, mean, num):
+def stddev(numbers, mean, num):
 	sum = 0
 
 	for val in numbers:
@@ -30,20 +30,20 @@ def stddev (numbers, mean, num):
 	return math.sqrt(sum / num)
 
 
-def median (numbers, num):
+def median(numbers, num):
 
 	numbers.sort()
 	return numbers[num // 2]
 
 
-def mode (numbers, num):
+def mode(numbers, num):
 	modval = []
 	modcount = 0
 	index = 0
 
-	while index < num :
+	while index < num:
 		c = 1
-		while index+c < num and numbers[index] == numbers[index+c] :
+		while index+c < num and numbers[index] == numbers[index+c]:
 			c += 1
 
 		if c == modcount:
@@ -56,9 +56,9 @@ def mode (numbers, num):
 	return modval
 
 
-def getsample (numbers, num):
+def getsample(numbers, num):
 	i = 0
-	while i < num :
+	while i < num:
 		sample = random.normalvariate(75, 50)
 		numbers.append(int(sample))
 		i += 1
